@@ -1,0 +1,13 @@
+[
+  {
+    "time":944192088.2687040567,
+    "time_utc":"1999-12-03 03:34:48",
+    "end_time":944192142.650818944,
+    "attack_type":"Plaintext Credentials",
+    "severity":"High",
+    "src":"192.168.0.2",
+    "dst":"192.168.0.1:23",
+    "evidence":"Telnet typed at login prompt: username='fake', password='u***' sent in clear text from 192.168.0.2 to 192.168.0.1:23",
+    "wireshark_filter":"ip.addr==192.168.0.2 && ip.addr==192.168.0.1 && tcp.port==23"
+  }
+]

@@ -1,0 +1,35 @@
+[
+  {
+    "time":1792490417.6844038963,
+    "time_utc":"2026-10-20 10:00:17",
+    "end_time":1792490661.2299079895,
+    "attack_type":"DNS Tunneling",
+    "severity":"Medium",
+    "src":"192.168.56.12",
+    "dst":"googlevideo.com",
+    "evidence":"7 suspicious queries for *.googlevideo.com; avg name length 35 chars, max subdomain entropy 3.53 bits\/char; e.g. r3---sn-ci5gup-qxas.googlevideo.com",
+    "wireshark_filter":"ip.src==192.168.56.12 && dns.qry.name contains \"googlevideo.com\""
+  },
+  {
+    "time":1792490444.660394907,
+    "time_utc":"2026-10-20 10:00:44",
+    "end_time":1792490696.1015450954,
+    "attack_type":"DNS Tunneling",
+    "severity":"Medium",
+    "src":"192.168.56.11",
+    "dst":"googlevideo.com",
+    "evidence":"7 suspicious queries for *.googlevideo.com; avg name length 35 chars, max subdomain entropy 3.53 bits\/char; e.g. r3---sn-ci5gup-qxas.googlevideo.com",
+    "wireshark_filter":"ip.src==192.168.56.11 && dns.qry.name contains \"googlevideo.com\""
+  },
+  {
+    "time":1792490455.0822811127,
+    "time_utc":"2026-10-20 10:00:55",
+    "end_time":1792490667.4508190155,
+    "attack_type":"DNS Tunneling",
+    "severity":"Medium",
+    "src":"192.168.56.10",
+    "dst":"googlevideo.com",
+    "evidence":"7 suspicious queries for *.googlevideo.com; avg name length 35 chars, max subdomain entropy 3.53 bits\/char; e.g. r3---sn-ci5gup-qxas.googlevideo.com",
+    "wireshark_filter":"ip.src==192.168.56.10 && dns.qry.name contains \"googlevideo.com\""
+  }
+]

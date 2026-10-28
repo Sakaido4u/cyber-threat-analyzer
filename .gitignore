@@ -1,0 +1,8 @@
+# Report (kept local)
+reports/report.md
+reports/report.docx
+
+# Python
+venv/
+__pycache__/
+*.pyc

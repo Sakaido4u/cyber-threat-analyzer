@@ -1,0 +1,156 @@
+[
+  {
+    "time":1792490430.0,
+    "time_utc":"2026-10-20 10:00:30",
+    "end_time":1792490432.4974999428,
+    "attack_type":"Port Scan",
+    "severity":"High",
+    "src":"192.168.56.101",
+    "dst":"192.168.56.20",
+    "evidence":"1000 distinct ports probed in 2.5 s with 1000 SYN-only packets; target replied RST 998 times; open ports seen: [22, 80]",
+    "wireshark_filter":"ip.src==192.168.56.101 && ip.dst==192.168.56.20 && tcp.flags.syn==1 && tcp.flags.ack==0"
+  },
+  {
+    "time":1792490490.0,
+    "time_utc":"2026-10-20 10:01:30",
+    "end_time":1792490528.0,
+    "attack_type":"ARP Spoofing",
+    "severity":"Critical",
+    "src":"08:00:27:66:66:66 (192.168.56.101)",
+    "dst":"192.168.56.1",
+    "evidence":"IP 192.168.56.1 first seen at MAC 08:00:27:00:00:01 (7 pkts), then claimed by 08:00:27:66:66:66 in 40 ARP packets (40 unsolicited\/replies); 08:00:27:66:66:66 also claims 192.168.56.101 (attacker's own IP?); target is the GATEWAY -> man-in-the-middle of all traffic",
+    "wireshark_filter":"arp.src.proto_ipv4==192.168.56.1"
+  },
+  {
+    "time":1792490560.0,
+    "time_utc":"2026-10-20 10:02:40",
+    "end_time":1792490618.5,
+    "attack_type":"Brute Force",
+    "severity":"High",
+    "src":"192.168.56.101",
+    "dst":"192.168.56.21",
+    "evidence":"40 connection attempts to SSH (port 22) in 58.5 s (41\/min)",
+    "wireshark_filter":"ip.src==192.168.56.101 && ip.dst==192.168.56.21 && tcp.port==22"
+  },
+  {
+    "time":1792490640.0,
+    "time_utc":"2026-10-20 10:04:00",
+    "end_time":1792490688.0,
+    "attack_type":"Brute Force",
+    "severity":"Critical",
+    "src":"192.168.56.101",
+    "dst":"192.168.56.21",
+    "evidence":"25 connection attempts to FTP (port 21) in 48.0 s (31\/min); 24 failed-login replies from server; a later reply shows LOGIN SUCCESSFUL - account may be compromised",
+    "wireshark_filter":"ip.src==192.168.56.101 && ip.dst==192.168.56.21 && tcp.port==21"
+  },
+  {
+    "time":1792490640.0239629745,
+    "time_utc":"2026-10-20 10:04:00",
+    "end_time":1792490688.0565810204,
+    "attack_type":"Plaintext Credentials",
+    "severity":"High",
+    "src":"192.168.56.101",
+    "dst":"192.168.56.21:21",
+    "evidence":"FTP USER\/PASS commands: username='admin', password='b*****' sent in clear text from 192.168.56.101 to 192.168.56.21:21; 25 credential sets exposed in total (users: admin)",
+    "wireshark_filter":"ip.addr==192.168.56.101 && ip.addr==192.168.56.21 && tcp.port==21"
+  },
+  {
+    "time":1792490700.0291790962,
+    "time_utc":"2026-10-20 10:05:00",
+    "end_time":1792490700.0768771172,
+    "attack_type":"Plaintext Credentials",
+    "severity":"High",
+    "src":"192.168.56.10",
+    "dst":"192.168.56.21:21",
+    "evidence":"FTP USER\/PASS commands: username='alice', password='S**********' sent in clear text from 192.168.56.10 to 192.168.56.21:21",
+    "wireshark_filter":"ip.addr==192.168.56.10 && ip.addr==192.168.56.21 && tcp.port==21"
+  },
+  {
+    "time":1792490708.0135860443,
+    "time_utc":"2026-10-20 10:05:08",
+    "end_time":1792490708.0135860443,
+    "attack_type":"Plaintext Credentials",
+    "severity":"High",
+    "src":"192.168.56.11",
+    "dst":"192.168.56.20:80",
+    "evidence":"HTTP login form field (POST\/GET): username='bob', password='Q*********' sent in clear text from 192.168.56.11 to 192.168.56.20:80",
+    "wireshark_filter":"ip.addr==192.168.56.11 && ip.addr==192.168.56.20 && tcp.port==80"
+  },
+  {
+    "time":1792490716.0200710297,
+    "time_utc":"2026-10-20 10:05:16",
+    "end_time":1792490716.0200710297,
+    "attack_type":"Plaintext Credentials",
+    "severity":"High",
+    "src":"192.168.56.12",
+    "dst":"192.168.56.20:80",
+    "evidence":"HTTP Authorization: Basic header (base64 is NOT encryption): username='carol', password='L*********' sent in clear text from 192.168.56.12 to 192.168.56.20:80",
+    "wireshark_filter":"ip.addr==192.168.56.12 && ip.addr==192.168.56.20 && tcp.port==80"
+  },
+  {
+    "time":1792490724.0305290222,
+    "time_utc":"2026-10-20 10:05:24",
+    "end_time":1792490724.3250579834,
+    "attack_type":"Plaintext Credentials",
+    "severity":"High",
+    "src":"192.168.56.12",
+    "dst":"192.168.56.22:23",
+    "evidence":"Telnet typed at login prompt: username='carol', password='t*******' sent in clear text from 192.168.56.12 to 192.168.56.22:23",
+    "wireshark_filter":"ip.addr==192.168.56.12 && ip.addr==192.168.56.22 && tcp.port==23"
+  },
+  {
+    "time":1792490732.0301749706,
+    "time_utc":"2026-10-20 10:05:32",
+    "end_time":1792490732.0508189201,
+    "attack_type":"Plaintext Credentials",
+    "severity":"High",
+    "src":"192.168.56.11",
+    "dst":"192.168.56.22:110",
+    "evidence":"POP3 USER\/PASS commands: username='bob', password='m********' sent in clear text from 192.168.56.11 to 192.168.56.22:110",
+    "wireshark_filter":"ip.addr==192.168.56.11 && ip.addr==192.168.56.22 && tcp.port==110"
+  },
+  {
+    "time":1792490760.0,
+    "time_utc":"2026-10-20 10:06:00",
+    "end_time":1792490765.9987499714,
+    "attack_type":"SYN Flood",
+    "severity":"High",
+    "src":"4801 sources (likely spoofed)",
+    "dst":"192.168.56.20",
+    "evidence":"peak 801 SYN\/s to port(s) [80]; 4801 SYNs in 6.0 s; completed-handshake ratio 0.00 (threshold < 0.2); 4801 distinct source IPs",
+    "wireshark_filter":"ip.dst==192.168.56.20 && tcp.flags.syn==1 && tcp.flags.ack==0"
+  },
+  {
+    "time":1792490820.0,
+    "time_utc":"2026-10-20 10:07:00",
+    "end_time":1792490859.5,
+    "attack_type":"DNS Tunneling",
+    "severity":"High",
+    "src":"192.168.56.12",
+    "dst":"tunnel-c2.net",
+    "evidence":"80 unique suspicious names (80 queries) for *.tunnel-c2.net; avg name length 70 chars, max subdomain entropy 4.80 bits\/char; e.g. hf6ebdemva5j4ef5sh5ssmey5ycykw.7dywi4d3feqaera47p3wcwvj2bo4df.0000.tun",
+    "wireshark_filter":"ip.src==192.168.56.12 && dns.qry.name contains \"tunnel-c2.net\""
+  },
+  {
+    "time":1792490880.0,
+    "time_utc":"2026-10-20 10:08:00",
+    "end_time":1792490884.9979999065,
+    "attack_type":"ICMP Flood",
+    "severity":"High",
+    "src":"192.168.56.101",
+    "dst":"192.168.56.20",
+    "evidence":"peak 500 echo requests\/s (threshold 100); 2500 requests in 5.0 s; avg size 1042 bytes",
+    "wireshark_filter":"ip.dst==192.168.56.20 && icmp.type==8"
+  },
+  {
+    "time":1792490930.0,
+    "time_utc":"2026-10-20 10:08:50",
+    "end_time":1792490930.7804589272,
+    "attack_type":"Suspicious Port",
+    "severity":"Medium",
+    "src":"192.168.56.12",
+    "dst":"203.0.113.66:4444",
+    "evidence":"connection to well-known backdoor\/C2 port 4444; 16 packets, 982 bytes exchanged over 0.8 s",
+    "wireshark_filter":"ip.addr==192.168.56.12 && tcp.port==4444"
+  }
+]

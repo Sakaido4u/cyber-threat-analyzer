@@ -1,0 +1,3 @@
+method,accuracy_%,macro_precision_%,macro_recall_%,macro_f1_%,attack_flows_detected_%,false_positive_flows,false_positive_rate_%
+Rule-based (detectors.py),99.76,97.22,84.13,83.33,99.59,5,0.057
+Random Forest (ml_compare.py),99.85,86.99,94.44,89.21,99.96,24,0.275

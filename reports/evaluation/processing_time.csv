@@ -1,0 +1,5 @@
+pcap,packets,size_mb,parse_s,features_s,detect_s,total_s,alerts
+normal_60s.pcap,2432,0.7,0.61,0.04,0.1,0.75,0
+normal_300s.pcap,13340,3.85,3.22,0.04,0.27,3.52,0
+normal_900s.pcap,41458,11.92,11.4,0.09,0.92,12.42,0
+normal_1800s.pcap,83630,24.14,25.57,0.17,2.17,27.92,0

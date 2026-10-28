@@ -1,0 +1,17 @@
+pcap,source,packets,size_kb,attacks_in_truth,detected,missed,alerts,false_positives,time_s
+arp_spoof.pcap,lab (generated),6366,1772.3,1,1,0,1,0,1.91
+backdoor_port.pcap,lab (generated),5294,1433.3,1,1,0,1,0,1.46
+brute_force.pcap,lab (generated),10420,2687.5,5,5,0,5,0,2.69
+dns_tunnel.pcap,lab (generated),5754,1627.1,1,1,0,1,0,1.54
+icmp_flood.pcap,lab (generated),8468,4280.2,1,1,0,1,0,2.49
+mixed_attacks.pcap,lab (generated),37936,10450.0,14,14,0,14,0,9.66
+normal_traffic.pcap,lab (generated),12342,3441.2,0,0,0,0,0,3.39
+plaintext_credentials.pcap,lab (generated),5454,1515.3,5,5,0,5,0,1.45
+port_scan.pcap,lab (generated),7368,1638.7,1,1,0,1,0,1.79
+slow_port_scan.pcap,lab (generated),26912,7488.7,1,0,1,0,0,7.1
+syn_flood.pcap,lab (generated),11642,1895.2,1,1,0,1,0,2.76
+arp-storm.pcap,public,622,46.2,0,0,0,0,0,0.15
+dns.cap,public,38,4.2,0,0,0,0,0,0.07
+telnet-cooked.pcap,public,92,9.0,1,1,0,1,0,0.08
+telnet-raw.pcap,public,272,23.8,1,1,0,1,0,0.13
+http.cap,public,43,25.2,0,0,0,0,0,0.08

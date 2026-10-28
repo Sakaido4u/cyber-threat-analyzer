@@ -1,0 +1,15 @@
+method,class,precision_%,recall_%,f1_%,support
+Rule-based,Normal,99.5,99.9,99.7,8733
+Rule-based,Port Scan,100.0,4.8,9.1,42
+Rule-based,SYN Flood,100.0,100.0,100.0,9600
+Rule-based,Brute Force,83.3,100.0,90.9,25
+Rule-based,DNS Tunneling,100.0,100.0,100.0,12
+Rule-based,ICMP Flood,100.0,100.0,100.0,2
+Rule-based,Suspicious Port,100.0,100.0,100.0,2
+Random Forest,Normal,100.0,99.7,99.8,8733
+Random Forest,Port Scan,100.0,100.0,100.0,42
+Random Forest,SYN Flood,100.0,100.0,100.0,9600
+Random Forest,Brute Force,96.2,100.0,98.0,25
+Random Forest,DNS Tunneling,25.8,66.7,37.2,12
+Random Forest,ICMP Flood,100.0,100.0,100.0,2
+Random Forest,Suspicious Port,100.0,100.0,100.0,2

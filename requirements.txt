@@ -1,0 +1,14 @@
+# Analysis of Cyber Threats and Attacks in Data Traffic - dependencies
+# Install with:  pip install -r requirements.txt
+#
+# Note: PyShark was removed - pyshark 0.6 crashes on Python 3.14
+# ("There is no current event loop"). Scapy covers all parsing needs,
+# and tshark (installed with Wireshark) is used for manual verification.
+
+scapy==2.8.0          # packet parsing (PCAP read/write, ARP/IP/TCP/DNS layers)
+pandas==3.1.0         # per-packet tables and feature extraction
+matplotlib==3.11.2    # static charts for the report
+plotly==7.1.0         # interactive charts in the dashboard
+streamlit==1.66.1     # web dashboard
+scikit-learn==1.9.1   # optional Random Forest comparison (Checkpoint 5)
+pypandoc_binary       # converts reports/report.md to Word (bundles pandoc)
